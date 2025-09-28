@@ -1,26 +1,155 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  
+  /* Brand Colors */
+  --color-primary-green: #0FDA9A;
+  --color-primary-blue: #4BC6F6;
+  
+  /* Design Tokens */
+  --container-max-width: 1200px;
+  --container-padding: 20px;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  
+  /* Theme variables for Tailwind CSS */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
 }
 
 body {
-  background: var(--background);
+  background: #000000;
+  background-image: 
+    radial-gradient(ellipse at top, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom left, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+.glass {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-dark {
+  backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-gradient-green {
+  background: linear-gradient(135deg, #0FDA9A 0%, #0FDA9A 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-blue {
+  background: linear-gradient(135deg, #4BC6F6 0%, #4BC6F6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-primary {
+  background: linear-gradient(135deg, #0FDA9A 0%, #4BC6F6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-green {
+  background: linear-gradient(135deg, #0FDA9A 0%, #0FDA9A 100%);
+}
+
+.gradient-blue {
+  background: linear-gradient(135deg, #4BC6F6 0%, #4BC6F6 100%);
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, #0FDA9A 0%, #4BC6F6 100%);
+}
+
+/* Utility classes for new brand colors */
+.bg-primary-green {
+  background-color: var(--color-primary-green);
+}
+
+.bg-primary-blue {
+  background-color: var(--color-primary-blue);
+}
+
+.text-primary-green {
+  color: var(--color-primary-green);
+}
+
+.text-primary-blue {
+  color: var(--color-primary-blue);
+}
+
+.border-primary-green {
+  border-color: var(--color-primary-green);
+}
+
+/* Кастомные стили скроллбара */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #333C3E;
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #0FDA9A;
+}
+
+.scrollbar-track-transparent::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thumb-rounded-full::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+}
+
+.gradient-border-image {
+  position: relative;
+}
+.gradient-border-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 40px; 
+  padding: 1px; 
+  background:linear-gradient(45deg,#0FDA9A,#4BC6F6); 
+  will-change: transform;
+  mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  mask-composite: exclude; 
 }

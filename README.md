@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 ExbitBot - Криптобот Лендинг
 
-## Getting Started
+Современный лендинг для криптобота с полной статической генерацией на Next.js 15.
 
-First, run the development server:
+## ✨ Особенности
 
+- 🎯 **Статическая генерация** - быстрая загрузка, идеально для хостинга
+- 🎨 **Премиум дизайн** - современный 2026 дизайн с анимациями
+- 📱 **Адаптивность** - идеально на всех устройствах
+- ⚡ **Высокая производительность** - оптимизированный код
+- 🔒 **TypeScript** - полная типизация
+- 🎭 **Framer Motion** - плавные анимации
+
+## 🛠️ Технологии
+
+- **Next.js 15** с App Router
+- **TypeScript** для типизации
+- **TailwindCSS 4** для стилей
+- **Framer Motion** для анимаций
+- **Lucide React** для иконок
+
+## 🚀 Быстрый старт
+
+### Установка зависимостей
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Разработка
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Сборка для продакшена
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Структура проекта
 
-## Learn More
+```
+src/
+├── app/                    # Next.js страницы
+├── components/            
+│   ├── ui/               # UI компоненты
+│   └── layout/           # Layout компоненты
+├── sections/             # Секции лендинга
+├── lib/                  # Утилиты и константы
+├── animations/           # Анимации
+├── types/                # TypeScript типы
+└── data/                 # Статические данные
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Дизайн-система
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Цветовая палитра
+- **Primary**: Blue → Purple градиент
+- **Background**: Gray-900 → Black
+- **Text**: White, Gray-300, Gray-600
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Анимации
+- Fade In Up при скролле
+- Hover эффекты
+- Плавные переходы
 
-## Deploy on Vercel
+## 📦 Деплой
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Проект готов для деплоя на любой статический хостинг:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Vercel** (рекомендуется)
+- **Netlify**
+- **GitHub Pages**
+- **AWS S3 + CloudFront**
+
+После `npm run build` папка `out/` содержит готовые статические файлы.
+
+## 🔧 Настройка
+
+Основные настройки в `src/lib/constants.ts`:
+
+```typescript
+export const SITE_CONFIG = {
+  name: "ExbitBot",
+  description: "Премиум криптобот для торговли",
+  url: "https://exbitbot.com",
+  // ...
+}
+```
+
+## 📈 Производительность
+
+- ✅ Статическая генерация
+- ✅ Оптимизированные изображения
+- ✅ Минифицированный код
+- ✅ Tree shaking
+- ✅ Лейзи лоадинг
+
+## 🤝 Разработка
+
+1. Форкните репозиторий
+2. Создайте ветку для фичи (`git checkout -b feature/amazing-feature`)
+3. Коммитьте изменения (`git commit -m 'Add amazing feature'`)
+4. Пушьте в ветку (`git push origin feature/amazing-feature`)
+5. Создайте Pull Request
+
+## 📄 Лицензия
+
+MIT License - см. файл [LICENSE](LICENSE) для деталей.
+
+---
+
+Сделано с ❤️ для криптотрейдеров
