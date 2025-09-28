@@ -146,27 +146,13 @@ export default function HeroSection() {
                             { value: 'USDT', label: 'USDT' },
                             { value: 'BTC', label: 'BTC' },
                             { value: 'ETH', label: 'ETH' },
-                            { value: 'TRX', label: 'TRX' },
-                            { value: 'XRP', label: 'XRP' },
-                            { value: 'LTC', label: 'LTC' },
-                            { value: 'BCH', label: 'BCH' },
-                            { value: 'DOGE', label: 'DOGE' },
-                            { value: 'DOT', label: 'DOT' },
-                            { value: 'SOL', label: 'SOL' },
-                            { value: 'AVAX', label: 'AVAX' },
-                            { value: 'TON', label: 'TON' },
-                            { value: 'LINK', label: 'LINK' },
-                            { value: 'UNI', label: 'UNI' },
-                            { value: 'AAVE', label: 'AAVE' },
-                            { value: 'SUI', label: 'SUI' },
-                            { value: 'NEAR', label: 'NEAR' },
-                            { value: 'ATOM', label: 'ATOM' }
+                            { value: 'XMR', label: 'XMR' }
                           ]}
                           value="USDT"
                         />
                       </div>
                       <div className="text-left text-[14px] text-[#CACDDD] leading-[121%] max-w-[100%] lg:max-w-[188px]">
-                        <div>Пополнение по рыночному курсу USDT</div>
+                        <div>Списание по курсу Rapira</div>
                       </div>
                     </div>
                     <div className="flex flex-col lg:flex-row items-start lg:items-center justify-start gap-[12px] lg:gap-[43px]">
