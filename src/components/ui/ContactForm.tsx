@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from './Button';
 import { Input } from './Input';
+import { MaskedInput } from './MaskedInput';
 
 interface ContactFormProps {
   onSubmit: (data: ContactFormData) => void;
@@ -50,7 +51,23 @@ export function ContactForm({ onSubmit, className }: ContactFormProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    // Валидация полей
     if (!formData.name.trim() || !formData.phone.trim() || !formData.telegram.trim()) {
+      return;
+    }
+
+    // Валидация телефона (должен быть в формате +7 (XXX) XXX-XX-XX)
+    const phoneRegex = /^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/;
+    if (!phoneRegex.test(formData.phone)) {
+      setSubmitStatus('error');
+      setTimeout(() => setSubmitStatus('idle'), 3000);
+      return;
+    }
+
+    // Валидация Telegram (должен начинаться с @)
+    if (!formData.telegram.startsWith('@')) {
+      setSubmitStatus('error');
+      setTimeout(() => setSubmitStatus('idle'), 3000);
       return;
     }
 
@@ -93,19 +110,21 @@ export function ContactForm({ onSubmit, className }: ContactFormProps) {
           onChange={(e) => handleChange('name', e.target.value)}
           required
         />
-        <Input
-          placeholder="Телефон"
+        <MaskedInput
+          placeholder="+7 (999) 999-99-99"
           value={formData.phone}
           className="h-[44px] lg:h-[54px] bg-transparent text-[14px] lg:text-[12px]"
-          onChange={(e) => handleChange('phone', e.target.value)}
+          onChange={(value) => handleChange('phone', value)}
           type="tel"
+          mask="phone"
           required
         />
-        <Input
-          placeholder="Telegram"
+        <MaskedInput
+          placeholder="@username"
           value={formData.telegram}
           className="h-[44px] lg:h-[54px] bg-transparent text-[14px] lg:text-[12px]"
-          onChange={(e) => handleChange('telegram', e.target.value)}
+          onChange={(value) => handleChange('telegram', value)}
+          mask="telegram"
           required
         />
       </div>
@@ -128,8 +147,12 @@ export function ContactForm({ onSubmit, className }: ContactFormProps) {
             animate={{ opacity: 1, y: 0 }}
             className="bg-red-500/10 border border-red-500/20 rounded-lg p-[20px] text-red-400 text-[14px] leading-[121%]"
           >
-            ❌ Ошибка отправки. Свяжитесь с нами напрямую:
-            <div className="mt-[20px] space-y-[10px]">
+            ❌ Ошибка отправки. Проверьте правильность заполнения полей:
+            <div className="mt-[10px] text-[12px] text-red-300">
+              • Телефон: +7 (999) 999-99-99<br/>
+              • Telegram: @username
+            </div>
+            <div className="mt-[15px] space-y-[10px]">
               <div>📱 Telegram: <a href="https://t.me/Sup_ExBitBot" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">@Sup_ExBitBot</a></div>
               <div>📧 Email: <a href="mailto:sup@exbitbot.net" className="text-blue-400 hover:text-blue-300 underline">sup@exbitbot.net</a></div>
             </div>
