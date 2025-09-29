@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true,
+    formats: ['image/webp', 'image/avif'],
   },
   eslint: {
     ignoreDuringBuilds: true,
@@ -12,6 +13,10 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  // SEO оптимизации
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: false,
 }
 
 export default nextConfig;

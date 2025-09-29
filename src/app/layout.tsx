@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { StructuredData } from "@/components/seo/StructuredData";
+import { CriticalCSS } from "@/components/seo/CriticalCSS";
+import { ResourceHints } from "@/components/seo/ResourceHints";
 import { SITE_CONFIG } from "@/lib/constants";
 import "./globals.css";
 
@@ -45,6 +48,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" className="scroll-smooth">
+      <head>
+        <ResourceHints />
+        <StructuredData />
+        <CriticalCSS />
+      </head>
       <body
         className={`${Jost.variable} antialiased`}
       >
