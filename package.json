@@ -14,7 +14,8 @@
     "pm2:delete": "pm2 delete exbitbot",
     "pm2:logs": "pm2 logs exbitbot",
     "pm2:monit": "pm2 monit",
-    "pm2:status": "pm2 status"
+    "pm2:status": "pm2 status",
+    "test:api": "node test-api.js"
   },
   "dependencies": {
     "clsx": "^2.1.1",

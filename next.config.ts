@@ -17,6 +17,10 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
+  // Настройки для API routes
+  experimental: {
+    serverComponentsExternalPackages: [],
+  },
 }
 
 export default nextConfig;

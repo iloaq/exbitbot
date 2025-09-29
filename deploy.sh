@@ -20,6 +20,14 @@ echo "📁 Копирование статических файлов..."
 cp -r public .next/standalone/
 cp -r .next/static .next/standalone/.next/
 
+# Проверка API routes
+echo "🔍 Проверка API routes..."
+if [ -d ".next/standalone/.next/server/app/api" ]; then
+  echo "✅ API routes найдены"
+else
+  echo "❌ API routes не найдены"
+fi
+
 # Создание папки для логов
 echo "📁 Создание папки для логов..."
 mkdir -p logs
