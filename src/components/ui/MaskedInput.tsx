@@ -29,8 +29,11 @@ export function MaskedInput({
     // Удаляем все нецифры
     const numbers = input.replace(/\D/g, '');
     
-    // Если начинается с 8, заменяем на +7
-    let formatted = numbers;
+    // Ограничиваем до 11 цифр (7 + 10 цифр номера)
+    const limitedNumbers = numbers.slice(0, 11);
+    
+    // Если начинается с 8, заменяем на 7
+    let formatted = limitedNumbers;
     if (formatted.startsWith('8')) {
       formatted = '7' + formatted.slice(1);
     }
@@ -65,9 +68,14 @@ export function MaskedInput({
       formatted = '@' + formatted;
     }
     
-    // Ограничиваем длину
+    // Ограничиваем длину до 32 символов (без @)
     if (formatted.length > 33) { // @ + 32 символа
       formatted = formatted.slice(0, 33);
+    }
+    
+    // Убираем @ если пользователь его удалил
+    if (formatted === '@') {
+      formatted = '';
     }
     
     return formatted;
@@ -88,6 +96,23 @@ export function MaskedInput({
     onChange(formattedValue);
   };
 
+  // Обработка клавиш для дополнительного контроля
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (mask === 'phone') {
+      // Разрешаем только цифры, Backspace, Delete, стрелки, Tab
+      const allowedKeys = ['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab', 'Enter'];
+      if (!allowedKeys.includes(e.key) && !/\d/.test(e.key)) {
+        e.preventDefault();
+      }
+    } else if (mask === 'telegram') {
+      // Разрешаем только буквы, цифры, @, Backspace, Delete, стрелки, Tab
+      const allowedKeys = ['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab', 'Enter'];
+      if (!allowedKeys.includes(e.key) && !/[a-zA-Z0-9@]/.test(e.key)) {
+        e.preventDefault();
+      }
+    }
+  };
+
   // Инициализация значения
   useEffect(() => {
     if (mask === 'phone' && value) {
@@ -105,6 +130,7 @@ export function MaskedInput({
       placeholder={placeholder}
       value={displayValue}
       onChange={handleChange}
+      onKeyDown={handleKeyDown}
       className={className}
       required={required}
     />
