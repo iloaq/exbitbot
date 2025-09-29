@@ -21,7 +21,11 @@ module.exports = {
     // Переменные окружения
     env: {
       NODE_ENV: 'production',
-      PORT: 3000
+      PORT: 3000,
+      // Настройки для статики
+      NEXT_TELEMETRY_DISABLED: '1',
+      // Настройки для API
+      NODE_OPTIONS: '--max-old-space-size=1536'
     },
     
     // Мониторинг
