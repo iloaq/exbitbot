@@ -1,8 +1,9 @@
 module.exports = {
   apps: [{
     name: 'exbitbot',
-    script: 'server.js',
-    cwd: './.next/standalone',
+    script: 'npm',
+    args: 'start',
+    cwd: './',
     instances: 1, // Один инстанс для 2GB RAM
     exec_mode: 'fork', // fork вместо cluster для экономии памяти
     max_memory_restart: '1500M', // Перезапуск при превышении 1.5GB

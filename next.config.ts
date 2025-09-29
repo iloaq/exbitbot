@@ -1,8 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Standalone для PM2 с поддержкой API routes
-  output: 'standalone',
+  // Обычный Next.js для PM2
   trailingSlash: true,
   images: {
     formats: ['image/webp', 'image/avif'],
@@ -17,10 +16,6 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
-  // Настройки для API routes в standalone
-  experimental: {
-    serverComponentsExternalPackages: [],
-  },
 }
 
 export default nextConfig;
