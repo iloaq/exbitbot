@@ -19,10 +19,10 @@ export function Footer() {
           </div>
           
           <div className="flex flex-row gap-[48px] justify-start md:justify-end order-1 md:order-3">
-            <Link href="mailto:sup@exbitbot.net" target="_blank" className="text-[#EAEAEA] text-[14px] leading-[121%] flex flex-row gap-[7px] items-center">
+            <a href="mailto:sup@exbitbot.net" className="text-[#EAEAEA] text-[14px] leading-[121%] flex flex-row gap-[7px] items-center">
               <Icon name="mail-gradient" width={20} height={16}  />
               <p>sup@exbitbot.net</p>
-            </Link>
+            </a>
             <Link href="https://t.me/Sup_ExBitBot" target="_blank" className="text-[#EAEAEA] text-[14px] leading-[121%] flex flex-row gap-[7px] items-center">
               <Icon name="telegram-green" width={22} height={19} />
               <p>telegram</p>

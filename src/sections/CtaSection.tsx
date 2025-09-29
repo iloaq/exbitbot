@@ -30,11 +30,11 @@ export default function CtaSection() {
                 СВЯЗАТЬСЯ В TELEGRAM
               </Button>
             </Link>
-            <Link href="mailto:mail@mail.ru" target="_blank">
+            <a href="mailto:sup@exbitbot.net">
               <Button variant="outline" size="lg">
-                MAIL@MAIL.RU
+                SUP@EXBITBOT.NET
               </Button>
-            </Link>
+            </a>
           </div>
         </motion.div>
       </div>
