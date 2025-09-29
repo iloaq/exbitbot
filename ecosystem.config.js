@@ -49,9 +49,8 @@ module.exports = {
     env_production: {
       NODE_ENV: 'production',
       PORT: 3000,
-      // Добавьте ваши переменные окружения здесь
-      // TELEGRAM_BOT_TOKEN: 'your_token',
-      // TELEGRAM_CHAT_ID: 'your_chat_id'
+      TELEGRAM_BOT_TOKEN: "7834134024:AAG0qcxshpK_-pyo-ay9OMI4lwv9Gtcw5iU",
+      TELEGRAM_CHAT_ID: "591431818"
     }
   }]
 };
