@@ -5,7 +5,7 @@ module.exports = {
     cwd: './.next/standalone',
     instances: 1, // Один инстанс для 2GB RAM
     exec_mode: 'fork', // fork вместо cluster для экономии памяти
-    max_memory_restart: '1.5G', // Перезапуск при превышении 1.5GB
+    max_memory_restart: '1500M', // Перезапуск при превышении 1.5GB
     node_args: '--max-old-space-size=1536', // Ограничение памяти Node.js
     // Настройки для API routes
     env_file: '.env.local',
