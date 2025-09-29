@@ -51,7 +51,8 @@ module.exports = {
       NODE_ENV: 'production',
       PORT: 3000,
       TELEGRAM_BOT_TOKEN: "7834134024:AAG0qcxshpK_-pyo-ay9OMI4lwv9Gtcw5iU",
-      TELEGRAM_CHAT_ID: "591431818"
+      TELEGRAM_CHAT_ID: "591431818",
+      NEXT_PUBLIC_YANDEX_METRIKA_ID: "104320310"
     }
   }]
 };
