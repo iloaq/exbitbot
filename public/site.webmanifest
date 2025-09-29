@@ -1,0 +1,28 @@
+{
+  "name": "ExBitBot - Массовые выплаты на карты",
+  "short_name": "ExBitBot",
+  "description": "Автоматические массовые выплаты на карты за криптовалюту. Быстро, без ограничений, с уведомлениями в Telegram.",
+  "icons": [
+    {
+      "src": "/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#0FDA9A",
+  "background_color": "#0F1014",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "lang": "ru"
+}

@@ -7,9 +7,8 @@ export function StructuredData() {
     "name": "ExBitBot - Массовые выплаты на карты",
     "description": "Автоматические массовые выплаты на карты за криптовалюту. Быстро, без ограничений, с уведомлениями в Telegram.",
     "url": SITE_CONFIG.url,
-    "logo": `${SITE_CONFIG.url}/images/logo.png`,
+    "logo": "https://exbitbot.com/header.svg",
     "image": SITE_CONFIG.ogImage,
-    "telephone": "+7-XXX-XXX-XX-XX",
     "email": "sup@exbitbot.net",
     "address": {
       "@type": "PostalAddress",

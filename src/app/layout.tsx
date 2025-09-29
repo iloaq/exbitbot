@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { StructuredData } from "@/components/seo/StructuredData";
 import { CriticalCSS } from "@/components/seo/CriticalCSS";
 import { ResourceHints } from "@/components/seo/ResourceHints";
+import { YandexMetrika } from "@/components/seo/YandexMetrika";
 import { SITE_CONFIG } from "@/lib/constants";
 import "./globals.css";
 
@@ -15,6 +16,7 @@ const Jost = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://exbitbot.com'),
   title: SITE_CONFIG.name,
   description: SITE_CONFIG.description,
   keywords: [...SITE_CONFIG.keywords],
@@ -52,10 +54,17 @@ export default function RootLayout({
         <ResourceHints />
         <StructuredData />
         <CriticalCSS />
+        {/* Favicon и иконки */}
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
         className={`${Jost.variable} antialiased`}
       >
+        <YandexMetrika yandexId={process.env.NEXT_PUBLIC_YANDEX_METRIKA_ID || '104320310'} />
         <Header />
         {children}
         <Footer />

@@ -2,7 +2,8 @@ export const SITE_CONFIG = {
   name: "ExBitBot - Массовые выплаты на карты",
   description: "Автоматические массовые выплаты на карты за криптовалюту. Быстро, без ограничений, с уведомлениями в Telegram. Комиссия от 0.15%",
   url: "https://exbitbot.com",
-  ogImage: "/images/og-image.jpg",
+  ogImage: "https://exbitbot.com/images/apppayment.png",
+  yandexMetrikaId: process.env.NEXT_PUBLIC_YANDEX_METRIKA_ID || '',
   keywords: [
     "массовые выплаты",
     "выплаты на карты",
