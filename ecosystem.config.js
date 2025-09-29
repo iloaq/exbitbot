@@ -7,6 +7,8 @@ module.exports = {
     exec_mode: 'fork', // fork вместо cluster для экономии памяти
     max_memory_restart: '1.5G', // Перезапуск при превышении 1.5GB
     node_args: '--max-old-space-size=1536', // Ограничение памяти Node.js
+    // Настройки для API routes
+    env_file: '.env.local',
     
     // Логирование
     log_file: './logs/combined.log',

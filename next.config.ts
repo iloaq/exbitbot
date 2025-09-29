@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Убираем статическую генерацию для работы API
+  // Standalone для PM2 с поддержкой API routes
   output: 'standalone',
   trailingSlash: true,
   images: {
@@ -17,7 +17,7 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
-  // Настройки для API routes
+  // Настройки для API routes в standalone
   experimental: {
     serverComponentsExternalPackages: [],
   },

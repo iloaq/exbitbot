@@ -20,6 +20,15 @@ echo "📁 Копирование статических файлов..."
 cp -r public .next/standalone/
 cp -r .next/static .next/standalone/.next/
 
+# Копирование переменных окружения
+echo "📄 Копирование переменных окружения..."
+if [ -f ".env.local" ]; then
+  cp .env.local .next/standalone/
+  echo "✅ .env.local скопирован"
+else
+  echo "⚠️ .env.local не найден - создайте файл с переменными окружения"
+fi
+
 # Проверка API routes
 echo "🔍 Проверка API routes..."
 if [ -d ".next/standalone/.next/server/app/api" ]; then
