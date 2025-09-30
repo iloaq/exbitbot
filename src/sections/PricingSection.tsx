@@ -19,7 +19,7 @@ export default function PricingSection() {
             Пополнение личного кабинета в USDT. Конвертация в RUB по курсу биржи Rapira по факту совершения исходящей операции.
           </p>
           <div className="hidden lg:flex items-center justify-center gap-[10px] bg-[#0F1014] px-[36px] py-[14px] rounded-[40px]">
-            <Link href="https://t.me/Sup_ExBitBot" target="_blank" className="text-[14px] text-white font-bold">
+            <Link href="https://t.me/PayExBitBot" target="_blank" className="text-[14px] text-white font-bold">
             УТОЧНИТЬ ДЕТАЛИ В TELEGRAM 
             </Link>
             <div className="w-[12px] h-[8px] -rotate-90">
@@ -106,7 +106,7 @@ export default function PricingSection() {
                 <div className="flex flex-col gap-[5px] max-w-[550px]">
                   <p className="text-[28px] lg:text-[42px] text-white font-semibold leading-[110%]">Массовые выплаты с прибылью для вас</p>
                   <p className="text-[14px] lg:text-[18px] text-[#B1AFB2] leading-[124%]">Получайте услугу по обработке массовых выплат и одновременно зарабатывайте на каждой операции.
-                  При ежемесячном обороте от 10 000 USDT возможна доплата по курсу в вашу пользу до +3% при конвертации USDT → RUB.</p>
+                  При ежемесячном обороте от 10 000 USDT возможна доплата по курсу в вашу пользу до +5% при конвертации USDT → RUB.</p>
                 </div>
                 <div className="flex flex-col gap-[5px] max-w-[407px] w-full mr-[0px] lg:mr-[50px]">
                   <Image 

@@ -45,7 +45,7 @@ export function Header() {
           </div>
 
           <div className="hidden lg:flex flex-row gap-[10px]">
-            <Link href="https://t.me/Sup_ExBitBot" target="_blank" className="text-[16px] cursor-pointer bg-[#081B16] px-[21px] py-[10px] rounded-[21px] flex items-center gap-[10px] group  transition-all duration-300"> 
+            <Link href="https://t.me/PayExBitBot" target="_blank" className="text-[16px] cursor-pointer bg-[#081B16] px-[21px] py-[10px] rounded-[21px] flex items-center gap-[10px] group  transition-all duration-300"> 
               <div className="relative w-[17px] h-[17px]">
                 <Icon name="telegram-green" width={17} height={17} className="absolute top-0 left-0 transition-opacity duration-300" />
                 <Icon name="telegram" width={17} height={17} className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -77,15 +77,15 @@ export function Header() {
 
           {/* Mobile menu button */}
           <div className="lg:hidden flex flex-row gap-[14px] items-center">
-            <div className="relative w-[17px] h-[17px]">
+            <Link href="https://t.me/PayExBitBot" target="_blank" className="relative w-[17px] h-[17px]">
               <Icon name="telegram-green" width={17} height={17} className="absolute top-0 left-0 transition-opacity duration-300" />
               <Icon name="telegram" width={17} height={17} className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
+            </Link>
 
-            <div className="relative w-[17px] h-[17px]">
+            <Link href="mailto:sup@exbitbot.net" className="relative w-[17px] h-[17px]">
                <Icon name="mail-green" width={17} height={17} className="absolute top-0 left-0 transition-opacity duration-300" />
                <Icon name="mail-gradient" width={17} height={17} className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
+            </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white transition-colors duration-5000 relative"

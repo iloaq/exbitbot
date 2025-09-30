@@ -14,7 +14,7 @@ export default function CtaSection() {
             Готовы подключить массовые выплаты?
           </h2>
           <p className="text-[14px] lg:text-[18px] text-[#EAEAEA] leading-[121%]">
-            Начините нее в Telegram - сосздайте полезное навания в день оббработка.
+            Напишите нам в Telegram - оперативно ответим на все вопросы!
           </p>
         </AnimatedSection>
 
@@ -25,7 +25,7 @@ export default function CtaSection() {
           transition={{ duration: 0.6 }}
         >
           <div className="flex flex-col sm:flex-row gap-[16px] lg:gap-[20px] justify-start">
-            <Link href="https://t.me/Sup_ExBitBot" target="_blank">
+            <Link href="https://t.me/PayExBitBot" target="_blank">
               <Button size="lg">
                 СВЯЗАТЬСЯ В TELEGRAM
               </Button>

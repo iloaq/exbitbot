@@ -153,7 +153,7 @@ export function ContactForm({ onSubmit, className }: ContactFormProps) {
               • Telegram: @username
             </div>
             <div className="mt-[15px] space-y-[10px]">
-              <div>📱 Telegram: <a href="https://t.me/Sup_ExBitBot" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">@Sup_ExBitBot</a></div>
+              <div>📱 Telegram: <a href="https://t.me/PayExBitBot" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">@Sup_ExBitBot</a></div>
               <div>📧 Email: <a href="mailto:sup@exbitbot.net" className="text-blue-400 hover:text-blue-300 underline">sup@exbitbot.net</a></div>
             </div>
           </motion.div>
