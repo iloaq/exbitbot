@@ -9,10 +9,13 @@ import { YandexMetrika } from "@/components/seo/YandexMetrika";
 import { SITE_CONFIG } from "@/lib/constants";
 import "./globals.css";
 
-const Jost = Inter({
-  variable: "--font-jost",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["latin"],
+const inter = Inter({
+  variable: "--font-inter",
+  weight: ["400", "500", "600"], // Только используемые веса для оптимизации
+  subsets: ["latin", "cyrillic"],
+  display: 'swap',
+  preload: true,
+  fallback: ['system-ui', 'arial'],
 });
 
 export const metadata: Metadata = {
@@ -62,7 +65,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
-        className={`${Jost.variable} antialiased`}
+        className={`${inter.variable} antialiased`}
       >
         <YandexMetrika yandexId={process.env.NEXT_PUBLIC_YANDEX_METRIKA_ID || '104320310'} />
         <Header />
