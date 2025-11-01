@@ -14,7 +14,7 @@ export function Footer() {
               <Icon name="mail-gradient" width={20} height={16}  />
               <p>sup@exbitbot.net</p>
             </a>
-            <Link href="https://t.me/PayExBitBot" target="_blank" className="text-[#EAEAEA] text-[14px] leading-[121%] flex flex-row gap-[7px] items-center">
+            <Link href="https://t.me/SuppPay" target="_blank" className="text-[#EAEAEA] text-[14px] leading-[121%] flex flex-row gap-[7px] items-center">
               <Icon name="telegram-green" width={22} height={19} />
               <p>telegram</p>
             </Link>

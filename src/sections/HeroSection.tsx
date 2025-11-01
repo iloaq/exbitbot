@@ -75,14 +75,14 @@ export default function HeroSection() {
               variants={fadeInUp}
               className="text-[28px] lg:text-[48px] font-semibold leading-tight lg:max-w-[500px] mb-[12px] lg:mb-[20px]"
             >
-              Отправляйте деньги по номеру карты или телефона в несколько кликов
+              Отправляйте RUB по номеру карты или телефона в несколько кликов
             </motion.h1>
 
             <motion.p
               variants={fadeInUp}
               className="text-[14px] lg:text-[18px] text-gray-300 lg:max-w-[500px] leading-[121%] mb-[20px] lg:mb-[31px]"
             >
-              Быстро и без ограничений на количесво получателей. Личный кабинет, API и мгновенные уведомления в Telegram.
+              Быстро и без ограничений на количество получателей. Личный кабинет, API и мгновенные уведомления в Telegram.
             </motion.p>
 
             <motion.div
@@ -128,7 +128,7 @@ export default function HeroSection() {
                 </GlassCard.Header>
                 <GlassCard.Content className="pt-[10px] lg:pt-0">
                   <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-[5px] lg:gap-[20px]">
-                    <p className="text-[14px] text-[#EAEAEA] leading-[121%]">Рееистр получателей</p>
+                    <p className="text-[14px] text-[#EAEAEA] leading-[121%]">Реестр получателей</p>
                     <p className="text-[14px] text-[#EAEAEA] leading-[121%]">~ до 2 часов исполнение</p>
                   </div>
                   <div className="mt-[10px] lg:mt-4">

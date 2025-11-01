@@ -19,7 +19,7 @@ export default function PricingSection() {
             Пополнение личного кабинета в USDT. Конвертация в RUB по курсу биржи Rapira по факту совершения исходящей операции.
           </p>
           <div className="hidden lg:flex items-center justify-center gap-[10px] bg-[#0F1014] px-[36px] py-[14px] rounded-[40px]">
-            <Link href="https://t.me/PayExBitBot" target="_blank" className="text-[14px] text-white font-bold">
+            <Link href="https://t.me/SuppPay" target="_blank" className="text-[14px] text-white font-bold">
             УТОЧНИТЬ ДЕТАЛИ В TELEGRAM 
             </Link>
             <div className="w-[12px] h-[8px] -rotate-90">
